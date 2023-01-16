@@ -32,6 +32,7 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")
 
   use("bluz71/vim-nightfly-guicolors")
+  use("folke/tokyonight.nvim")
 
   use("christoomey/vim-tmux-navigator")
 
@@ -65,6 +66,36 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
+    -- treesitter configuration
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
+
+  -- auto closing
+  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
+  -- floating term
+  use("voldikss/vim-floaterm")
+  
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+       require("auto-save").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+       }
+    end,
+  })
+
+  use({
+    "ggandor/leap.nvim",
+    require("leap").add_default_mappings()
+  })
 
   if packer_bootstrap then
     require("packer").sync()

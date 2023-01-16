@@ -13,7 +13,6 @@ keymap.set("n", "K", "5k")
 keymap.set("n", "<leader>j", "J")
 
 -- terminal management
-keymap.set("n", "<leader>t", ":term<CR>")
 keymap.set("t", "jk", "<C-\\><C-n>")
 
 -- clear search highlights
@@ -50,3 +49,10 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- Floaterm
+keymap.set("n", "<leader>co", ":FloatermNew --wintype=split --height=0.25<CR>") 
+keymap.set("n", "<leader>ct", ":FloatermToggle<CR>") 
+keymap.set("n", "<leader>cn", ":FloatermNext<CR>") 
+keymap.set("n", "<leader>cp", ":FloatermPrev<CR>") 
+keymap.set("n", "<leader>cx", ":FloatermKill<CR>")

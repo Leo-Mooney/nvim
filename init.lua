@@ -7,4 +7,5 @@ require("leo.plugins.nvim-tree")
 require("leo.plugins.lualine")
 require("leo.plugins.telescope")
 require("leo.plugins.nvim-cmp")
-
+require("leo.plugins.autopairs")
+require("leo.plugins.treesitter")
