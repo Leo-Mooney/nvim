@@ -6,11 +6,24 @@ local keymap = vim.keymap
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
+-- basic movement 
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "J", "5j")
 keymap.set("n", "K", "5k")
+
+-- general
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+keymap.set("x", "<leader>p", "\"_d")
 keymap.set("n", "<leader>j", "J")
+keymap.set("n", "gg", "gg0")
+
+-- open
+keymap.set("n", "<leader>ot", ":e ~/documents/todolist <CR>")
 
 -- terminal management
 keymap.set("t", "jk", "<C-\\><C-n>")
@@ -51,8 +64,18 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- Floaterm
-keymap.set("n", "<leader>co", ":FloatermNew --wintype=split --height=0.25<CR>") 
-keymap.set("n", "<leader>ct", ":FloatermToggle<CR>") 
-keymap.set("n", "<leader>cn", ":FloatermNext<CR>") 
-keymap.set("n", "<leader>cp", ":FloatermPrev<CR>") 
+keymap.set("n", "<leader>co", ":FloatermNew --wintype=split --height=0.25<CR>")
+keymap.set("n", "<leader>ct", ":FloatermToggle<CR>")
+keymap.set("n", "<leader>cn", ":FloatermNext<CR>")
+keymap.set("n", "<leader>cp", ":FloatermPrev<CR>")
 keymap.set("n", "<leader>cx", ":FloatermKill<CR>")
+
+-- Zen
+keymap.set("n", "<leader>zn", ":TZNarrow<CR>")
+keymap.set("v", "<leader>zn", ":'<,'>TZNarrow<CR>")
+keymap.set("n", "<leader>zf", ":TZFocus<CR>")
+keymap.set("n", "<leader>zm", ":TZMinimalist<CR>")
+keymap.set("n", "<leader>za", ":TZAtaraxis<CR>")
+
+-- Lsp
+keymap.set("n", "<leader>lt", ":LspStart<CR>:LspStop<CR>", {silent=true})

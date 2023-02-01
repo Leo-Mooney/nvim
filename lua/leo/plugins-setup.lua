@@ -1,3 +1,4 @@
+--
 -- auto install packer if not installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -63,9 +64,14 @@ return packer.startup(function(use)
   use("rafamadriz/friendly-snippets") -- useful snippets
 
   -- configuring lsp servers
-  use("neovim/nvim-lspconfig")
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
+  -- LSP
+  use{
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
     -- treesitter configuration
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -91,14 +97,21 @@ return packer.startup(function(use)
        }
     end,
   })
+  use("ggandor/leap.nvim")
 
   use({
-    "ggandor/leap.nvim",
-    require("leap").add_default_mappings()
-  })
+      "Pocco81/true-zen.nvim",
+      config = function()
+         require("true-zen").setup {
+          -- your config goes here
+          -- or just leave it empty :)
+         }
+      end,
+    })
+
+  use("goolord/alpha-nvim")
 
   if packer_bootstrap then
     require("packer").sync()
   end
 end)
- 
