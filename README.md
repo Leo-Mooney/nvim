@@ -8,3 +8,4 @@ Custom Neovim setup.
 - ripgrep
 - pyright
 - lua-langauge-server
+
