@@ -114,6 +114,8 @@ return packer.startup(function(use)
   use("nvim-zh/colorful-winsep.nvim")
 
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+  use("rebelot/kanagawa.nvim")
   if packer_bootstrap then
     require("packer").sync()
   end

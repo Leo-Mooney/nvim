@@ -5,6 +5,6 @@ end
 colorful_winsep.setup({
   highlight = {
     bg = "#16161E",
-    fg = "#2e5376",
+    fg = "#C8C093",
   },
 })
