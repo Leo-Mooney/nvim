@@ -111,6 +111,7 @@ return packer.startup(function(use)
 
   use("goolord/alpha-nvim")
 
+  use("nvim-zh/colorful-winsep.nvim")
   if packer_bootstrap then
     require("packer").sync()
   end
