@@ -9,3 +9,4 @@ Custom Neovim setup.
 - pyright
 - lua-langauge-server
 - npm
+- nerdfont
