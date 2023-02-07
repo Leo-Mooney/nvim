@@ -79,3 +79,6 @@ keymap.set("n", "<leader>za", ":TZAtaraxis<CR>")
 
 -- Lsp
 keymap.set("n", "<leader>lt", ":LspStart<CR>:LspStop<CR>", {silent=true})
+
+-- Alpha
+keymap.set("n", "<leader>as", ":Alpha<CR>")

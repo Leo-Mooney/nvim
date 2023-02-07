@@ -1,5 +1,5 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
+local alpha_status, alpha = pcall(require, "alpha")
+if not alpha_status then
   return
 end
 
@@ -46,7 +46,7 @@ dashboard.section.buttons.val = {
   dashboard.button("r", "  Recent Files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", "  TodoList", ":e ~/documents/todolist <CR>"),
   dashboard.button("c", "  Config", ":e ~/.config/nvim/init.lua <CR>"),
-  dashboard.button("q", "  Quit", ":qa<CR>"),
+  dashboard.button("q", "  Quit", ":q<CR>"),
 }
 
 dashboard.section.buttons.opts = {
