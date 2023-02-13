@@ -43,6 +43,7 @@ dashboard.section.buttons.val = {
 
   dashboard.button("e", "  Explorer", ":NvimTreeToggle<CR>"),
   dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
+  dashboard.button("s", "  Search String", ":Telescope live_grep <CR>"),
   dashboard.button("r", "  Recent Files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", "  TodoList", ":e ~/documents/todolist <CR>"),
   dashboard.button("c", "  Config", ":e ~/.config/nvim/init.lua <CR>"),

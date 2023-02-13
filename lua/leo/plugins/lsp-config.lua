@@ -16,9 +16,9 @@ end
 mason.setup()
 mason_lsp_config.setup({
   ensure_installed = {
-    "sumneko_lua",
+    "lua_ls",
     "pyright",
   }
 })
-lspconfig.sumneko_lua.setup{autostart=false}
+lspconfig.lua_ls.setup{autostart=false}
 lspconfig.pyright.setup{autostart=false}

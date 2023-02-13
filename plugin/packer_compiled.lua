@@ -128,7 +128,7 @@ _G.packer_plugins = {
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/Users/leomooney/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
+    url = "https://github.com/leo-moooney/kanagawa.nvim"
   },
   ["leap.nvim"] = {
     loaded = true,
@@ -234,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/leomooney/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/leomooney/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vim-maximizer"] = {
     loaded = true,

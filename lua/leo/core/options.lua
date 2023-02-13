@@ -39,3 +39,4 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 vim.g.floaterm_autoinsert = false
+vim.o.updatetime=100
