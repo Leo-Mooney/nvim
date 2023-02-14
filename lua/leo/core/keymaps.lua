@@ -49,11 +49,14 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
--- plugin keymaps
+---------------------
+-- Plugin Keymaps
+---------------------
 
---vim-maximizer
+-- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
+-- file explorer
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
@@ -63,22 +66,15 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
--- Floaterm
+-- floaterm
 keymap.set("n", "<leader>co", ":FloatermNew --wintype=split --height=0.25<CR>")
 keymap.set("n", "<leader>ct", ":FloatermToggle<CR>")
 keymap.set("n", "<leader>cn", ":FloatermNext<CR>")
 keymap.set("n", "<leader>cp", ":FloatermPrev<CR>")
 keymap.set("n", "<leader>cx", ":FloatermKill<CR>")
 
--- Zen
-keymap.set("n", "<leader>zn", ":TZNarrow<CR>")
-keymap.set("v", "<leader>zn", ":'<,'>TZNarrow<CR>")
-keymap.set("n", "<leader>zf", ":TZFocus<CR>")
-keymap.set("n", "<leader>zm", ":TZMinimalist<CR>")
-keymap.set("n", "<leader>za", ":TZAtaraxis<CR>")
-
--- Lsp
+-- lsp
 keymap.set("n", "<leader>lt", ":LspStart<CR>:LspStop<CR>", {silent=true})
 
--- Alpha
+-- startup screen
 keymap.set("n", "<leader>as", ":Alpha<CR>")

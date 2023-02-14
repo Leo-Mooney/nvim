@@ -1,4 +1,3 @@
---
 -- auto install packer if not installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -29,27 +28,25 @@ end
 
 return packer.startup(function(use)
   use("wbthomason/packer.nvim") 
-  
   use("nvim-lua/plenary.nvim")
-
-  use("bluz71/vim-nightfly-guicolors")
-  use("folke/tokyonight.nvim")
-
   use("christoomey/vim-tmux-navigator")
-
   use("szw/vim-maximizer")
-
   use("tpope/vim-surround") 
   use("vim-scripts/ReplaceWithRegister")
-
   use("numToStr/Comment.nvim")
-
   use("nvim-tree/nvim-tree.lua")
- 
   use("kyazdani42/nvim-web-devicons")
-  
   use("nvim-lualine/lualine.nvim")
+  use("voldikss/vim-floaterm")
+  use("Pocco81/auto-save.nvim")
+  use("ggandor/leap.nvim")
+  use("goolord/alpha-nvim")
+  use("nvim-zh/colorful-winsep.nvim")
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use("leo-moooney/kanagawa.nvim")
+  use("airblade/vim-gitgutter")
 
+  -- telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })  
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
@@ -85,38 +82,6 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
-  -- floating term
-  use("voldikss/vim-floaterm")
-  
-  use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-       require("auto-save").setup {
-        -- your config goes here
-        -- or just leave it empty :)
-       }
-    end,
-  })
-  use("ggandor/leap.nvim")
-
-  use({
-      "Pocco81/true-zen.nvim",
-      config = function()
-         require("true-zen").setup {
-          -- your config goes here
-          -- or just leave it empty :)
-         }
-      end,
-    })
-
-  use("goolord/alpha-nvim")
-
-  use("nvim-zh/colorful-winsep.nvim")
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
-  use("leo-moooney/kanagawa.nvim")
-  
-  use("airblade/vim-gitgutter")
   if packer_bootstrap then
     require("packer").sync()
   end
