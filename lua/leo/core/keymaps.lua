@@ -21,6 +21,8 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", "\"_d")
 keymap.set("n", "<leader>j", "J")
 keymap.set("n", "gg", "gg0")
+keymap.set("n", "yl", "yy")
+keymap.set("n", "dl", "dd")
 
 -- open
 keymap.set("n", "<leader>ot", ":e ~/documents/todolist <CR>")
