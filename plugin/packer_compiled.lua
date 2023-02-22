@@ -242,6 +242,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/leomooney/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["winshift.nvim"] = {
+    loaded = true,
+    path = "/Users/leomooney/.local/share/nvim/site/pack/packer/start/winshift.nvim",
+    url = "https://github.com/sindrets/winshift.nvim"
   }
 }
 

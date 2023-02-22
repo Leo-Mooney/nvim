@@ -45,6 +45,7 @@ return packer.startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use("leo-moooney/kanagawa.nvim")
   use("airblade/vim-gitgutter")
+  use("sindrets/winshift.nvim")
 
   -- telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })  
