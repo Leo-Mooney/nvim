@@ -19,7 +19,7 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", "\"_d")
-keymap.set("n", "<leader>j", "J")
+keymap.set("n", "<leader>j", "J0")
 keymap.set("n", "gg", "gg0")
 keymap.set("n", "yl", "yy")
 keymap.set("n", "dl", "dd")
@@ -44,7 +44,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>sc", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>srl", ":WinShift right<CR>")
 keymap.set("n", "<leader>srh", ":WinShift left<CR>")
 keymap.set("n", "<leader>srk", ":WinShift up<CR>")
