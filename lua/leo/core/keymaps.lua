@@ -21,8 +21,15 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", "\"_d")
 keymap.set("n", "<leader>j", "J0")
 keymap.set("n", "gg", "gg0")
+
+-- line keymaps
 keymap.set("n", "yl", "yy")
 keymap.set("n", "dl", "dd")
+
+
+-- colorbar
+keymap.set("n", "<leader>bo", ":set colorcolumn=72<CR>")
+keymap.set("n", "<leader>bx", ":set colorcolumn=0<CR>")
 
 -- open
 keymap.set("n", "<leader>ot", ":e ~/documents/todolist <CR>")

@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use("leo-moooney/kanagawa.nvim")
   use("airblade/vim-gitgutter")
   use("sindrets/winshift.nvim")
+  use("vimwiki/vimwiki")
 
   -- telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })  
