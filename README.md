@@ -12,5 +12,7 @@ Custom Neovim configuration.
 - ripgrep
 - pyright
 - lua-langauge-server
-- npm
+- make
+- cmake
+- gcc
 - nerdfont
