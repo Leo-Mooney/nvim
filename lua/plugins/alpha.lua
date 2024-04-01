@@ -70,7 +70,7 @@ return {
     }
 
     local function footer()
-      return "Leo Mooney"
+      return string.format("%d Plugins Loaded", require("lazy").stats().count)
     end
 
     dashboard.section.footer.val = footer()
