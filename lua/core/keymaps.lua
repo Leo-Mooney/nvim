@@ -69,6 +69,7 @@ local status, builtin = pcall(require, 'telescope.builtin')
 if status then
   vim.keymap.set('n', '<leader>fd', builtin.find_files, {})
   vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
+  vim.keymap.set('n', '<leader>fe', builtin.diagnostics, {})
 end
 
 local status, _ = pcall(require, "lspconfig")
@@ -90,3 +91,4 @@ keymap.set("n", "<leader>cx", ":FloatermKill<CR>")
 if status then
   keymap.set("n", "<leader>sm", '<cmd>lua require("maximizer").toggle()<CR>', {silent=true})
 end
+
