@@ -1,7 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   tag = '0.1.6',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  dependencies = { 'nvim-lua/plenary.nvim', 'debugloop/telescope-undo.nvim'},
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
@@ -17,5 +17,6 @@ return {
         },
       },
     })
+    telescope.load_extension("undo")
   end
 }
