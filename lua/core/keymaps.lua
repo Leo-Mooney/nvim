@@ -70,12 +70,15 @@ if status then
   vim.keymap.set('n', '<leader>fd', builtin.find_files, {})
   vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
   vim.keymap.set('n', '<leader>fe', builtin.diagnostics, {})
+  vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
+  vim.keymap.set('n', '<leader>fk', builtin.treesitter, {})
   vim.keymap.set('n', '<leader>fu', "<cmd>Telescope undo<cr>", {})
 end
 
 local status, _ = pcall(require, "lspconfig")
 if status then
   vim.keymap.set("n", "<leader>ki", vim.lsp.buf.hover, {})
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 end
 
 local status, _ = pcall(require, "null-ls")
