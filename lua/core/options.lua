@@ -44,11 +44,10 @@ opt.backspace = "indent,eol,start"
 --         cache_enabled = 0,
 --     }
 -- end
-opt.clipboard:append("unnamedplus")
 
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+opt.clipboard:append("unnamedplus")
 
 opt.iskeyword:append("-")
-

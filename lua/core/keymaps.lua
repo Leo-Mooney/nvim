@@ -8,6 +8,8 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "J", "5j")
 keymap.set("n", "K", "5k")
+keymap.set("n", "H", "^")
+keymap.set("n", "L", "$")
 
 -- general
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -23,7 +25,6 @@ keymap.set("n", "gg", "gg0")
 -- line keymaps
 keymap.set("n", "yl", "yy")
 keymap.set("n", "dl", "dd")
-
 
 -- colorbar
 keymap.set("n", "<leader>bo", ":set colorcolumn=72<CR>")
@@ -96,3 +97,4 @@ if status then
   keymap.set("n", "<leader>sm", '<cmd>lua require("maximizer").toggle()<CR>', {silent=true})
 end
 
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { noremap = true, silent = true })
