@@ -12,12 +12,13 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "rust_analyzer"}
+        ensure_installed = { "lua_ls", "pyright", "rust_analyzer", "vtsls"}
       })
     end
   },
   {
     "neovim/nvim-lspconfig",
+    commit = "4bc481b6f0c0cf3671fc894debd0e00347089a4e",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
@@ -59,6 +60,7 @@ return {
           }
         }
       )
+    lspconfig.vtsls.setup({capabilities = capabilities})
     end
   },
   {

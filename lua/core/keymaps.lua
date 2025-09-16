@@ -92,6 +92,8 @@ keymap.set("n", "<leader>ct", ":FloatermToggle<CR>")
 keymap.set("n", "<leader>cn", ":FloatermNext<CR>")
 keymap.set("n", "<leader>cp", ":FloatermPrev<CR>")
 keymap.set("n", "<leader>cx", ":FloatermKill<CR>")
+keymap.del("n", "gri")
+keymap.del("n", "gra")
 
 if status then
   keymap.set("n", "<leader>sm", '<cmd>lua require("maximizer").toggle()<CR>', {silent=true})
