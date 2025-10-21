@@ -102,7 +102,7 @@ end
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { noremap = true, silent = true })
 
 -- copilot
-keymap.set('i', '<leader>l', 'copilot#Accept("\\<CR>")', {
+keymap.set('i', '<C-l>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
@@ -112,4 +112,4 @@ keymap.set('i', '<Right>', 'copilot#Accept("\\<CR>")', {
 })
 vim.g.copilot_no_tab_map = true
 
-
+keymap.set("n", "<leader>go", ":G diff origin/main...HEAD .<CR>")
