@@ -56,10 +56,10 @@ keymap.set("n", "<leader>srh", ":WinShift left<CR>")
 keymap.set("n", "<leader>srk", ":WinShift up<CR>")
 keymap.set("n", "<leader>srj", ":WinShift down<CR>")
 
-keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
+-- keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
+-- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+-- keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
+-- keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
 
 keymap.set("n", "<C-h>", "<C-w>h")
 keymap.set("n", "<C-j>", "<C-w>j")
@@ -113,3 +113,23 @@ keymap.set('i', '<Right>', 'copilot#Accept("\\<CR>")', {
 vim.g.copilot_no_tab_map = true
 
 keymap.set("n", "<leader>go", ":G diff origin/main...HEAD .<CR>")
+
+vim.api.nvim_create_user_command("Codex", function()
+  -- Open vertical split
+  vim.cmd("vsplit")
+
+  -- Open terminal and run codex
+  vim.cmd("terminal codex")
+
+  -- Optional: start in insert mode
+  vim.cmd("startinsert")
+end, {})
+
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("vsplit")
+  vim.cmd("terminal")
+  vim.cmd("startinsert")
+end, {
+  desc = "Open terminal in vertical split",
+})
+
