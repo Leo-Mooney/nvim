@@ -114,6 +114,17 @@ vim.api.nvim_create_user_command("Codex", function()
   vim.cmd("startinsert")
 end, {})
 
+vim.api.nvim_create_user_command("Claude", function()
+  -- Open vertical split
+  vim.cmd("vsplit")
+
+  -- Open terminal and run codex
+  vim.cmd("terminal claude")
+
+  -- Optional: start in insert mode
+  vim.cmd("startinsert")
+end, {})
+
 vim.keymap.set("n", "<leader>t", function()
   vim.cmd("vsplit")
   vim.cmd("terminal")
